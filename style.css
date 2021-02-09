@@ -19,3 +19,13 @@
 .meal-img img {
     width: 100%;
 }
+
+.notFound {
+    text-align: center;
+    size: 70px;
+    color: red;
+}
+
+.showRecipe{
+    display: block;
+}
