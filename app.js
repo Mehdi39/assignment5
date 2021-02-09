@@ -11,6 +11,8 @@ function getMealList() {
     // getting the value of searchbar and removing the any white space using trim method.
     let searchInputTxt = document.getElementById('searchBar').value.trim();
 
+    
+
     // passing the search input text as dynamic api call.
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputTxt}`)
         .then(res => res.json())
@@ -27,15 +29,21 @@ const displayMenu = data => {
         data.meals.forEach(meal => {
             // mealbox will add forEach meal in the array/object.
             mealBox = mealBox + `
-            <div class = "meal-item" data-id = "${meal.idMeal}">
-                        <div class = "meal-img">
-                            <img src = "${meal.strMealThumb}" alt = "food">
-                        </div>
-                        <div class = "meal-name">
-                            <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn btn btn-success">Get Recipe</a>
+
+                
+                    <div class="col-2 meal-box">
+                        <div class ="meal-item" data-id ="${meal.idMeal}">
+                            <div class = "meal-img">
+                                <img src = "${meal.strMealThumb}" alt = "food">
+                            </div>
+                            <div class = "meal-name">
+                                <h3>${meal.strMeal}</h3>
+                                <a href = "#" class = "recipe-btn btn btn-warning">Get Recipe</a>
+                            </div>
                         </div>
                     </div>
+                
+                    
             `;
         })
     } else {
@@ -46,6 +54,11 @@ const displayMenu = data => {
     mealDiv.innerHTML = mealBox;
 }
 
+
+// section for meal details
+function mealDetails() {
+    console.log('gg');
+}
 
 
 

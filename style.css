@@ -1,3 +1,21 @@
 .container {
     text-align: center;
 }
+
+#searchBar {
+    border: 2px solid black;
+}
+
+#enter-btn {
+    margin: 20px;
+}
+
+.meal-box{
+    
+    margin: 20px;
+    
+}
+
+.meal-img img {
+    width: 100%;
+}
